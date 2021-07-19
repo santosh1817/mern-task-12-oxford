@@ -152,7 +152,7 @@ const Dictionary = (props) => {
                 placeholder='search'
                 search
                 // aria-placeholder='hi'
-                style={{ display: 'flex', flexGrow: 1 }}
+                style={{ display: 'flex', flexGrow: 1, color: 'white' }}
                 onChange={wordSearch}
                 InputProps={{ disableUnderline: true }}
                 // helperText={
@@ -168,7 +168,7 @@ const Dictionary = (props) => {
             </Grid>
             <Grid item xs={1}>
               <IconButton onClick={handleCloseIconClick}>
-                <CloseIcon />
+                <CloseIcon style={{ color: 'white' }} />
               </IconButton>
             </Grid>
           </>
@@ -185,7 +185,7 @@ const Dictionary = (props) => {
             </Grid>
             <Grid item xs={1}>
               <IconButton onClick={handleSearchIconClick}>
-                <SearchIcon />
+                <SearchIcon style={{ color: 'white' }} />
               </IconButton>
             </Grid>
           </>
