@@ -14,7 +14,7 @@ let config = {
 export const fetchAll = () => {
   return async (dispatch) => {
     console.log('here');
-    const response = await axios.get('http://localhost:3005/word/get');
+    const response = await axios.get('/word/get');
     if (!response) {
       throw new Error('Something went wrong ..!!');
       // more detail error handling can be done
@@ -33,7 +33,7 @@ export const postData = (data) => {
 
   return async (dispatch) => {
     console.log('here');
-    const response = await axios.post('http://localhost:3005/word/add', data);
+    const response = await axios.post('/word/add', data);
     if (!response) {
       alert(' Oops,  please enter valid word..!!');
       throw new Error('Something went wrong ..!!');
@@ -53,9 +53,7 @@ export const fetchSearchData = (searchword) => {
   console.log('dtasearch');
   return async (dispatch) => {
     console.log('here');
-    const response = await axios.get(
-      `http://localhost:3005/word/search?word=${searchword}`
-    );
+    const response = await axios.get(`/word/search?word=${searchword}`);
     if (!response) {
       throw new Error('Something went wrong ..!!');
       // more detail error handling can be done

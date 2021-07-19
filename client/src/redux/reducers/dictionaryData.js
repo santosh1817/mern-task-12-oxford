@@ -4,7 +4,6 @@ const initialState = {
   allData: [],
 };
 const dictionaryData = (state = initialState, action) => {
-  console.log(action, 'act');
   switch (action.type) {
     case FETCH_ALL:
       return {
